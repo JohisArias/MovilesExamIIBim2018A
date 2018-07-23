@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Autor-Libro</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="textview">TextView</string>
+    <string name="inicia_sesi_n">Iniciar Sesión</string>
+    <string name="crear">CREAR</string>
+    <string name="listar">LISTAR</string>
+    <string name="buscar">BUSCAR</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="detalles">DETALLES</string>
+
+    <string name="autor">Autor</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="numero_medallas">Número de Libros</string>
+    <string name="campeon">Es ecuatoriano?</string>
+
+    <string name="creacion_pokemon">Crear Libro</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+
+    <string-array name="roles">
+        <item>VENDEDOR</item>
+        <item>CLIENTE</item>
+        <item>DELIVERY</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

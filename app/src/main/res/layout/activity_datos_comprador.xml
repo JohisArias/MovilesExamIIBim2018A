@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-libro"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosCompradorActivity">
+
+    <Button
+        android:id="@+id/button_ubicacion"
+        android:layout_width="161dp"
+        android:layout_height="51dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Enviar Ubicacion"
+        android:textColor="@android:color/background_light"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviarDatosComprador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSector"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:text="Comprador"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.501"
+        app2:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/txtCedulaComprador"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:hint="Cedula "
+        android:inputType="number"
+        android:textAlignment="center"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <EditText
+        android:id="@+id/txtSector"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:hint="Sector"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCedulaComprador"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <Button
+        android:id="@+id/btnEnviarDatosComprador"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:text="crear orden"
+        android:textColor="@android:color/background_light"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="429dp" />
+
+</android.support.constraint.ConstraintLayout>

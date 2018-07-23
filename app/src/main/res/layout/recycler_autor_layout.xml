@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/txtNombreTienda"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtDireccionTienda"
+            android:layout_width="210dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txtNombreTienda"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtFechaAperturaTienda"
+            android:layout_width="210dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txtDireccionTienda"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDetalles"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@+id/txtFechaAperturaTienda"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/detalles"
+            android:textColor="@android:color/background_light" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorPrimary" />
+
+</RelativeLayout>
