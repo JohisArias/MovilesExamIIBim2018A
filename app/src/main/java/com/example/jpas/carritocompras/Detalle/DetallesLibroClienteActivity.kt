@@ -33,7 +33,7 @@ class DetallesLibroClienteActivity : AppCompatActivity() {
         myBitmapAgain = decodeBase64(libro?.imagenLibro.toString()!!)
         showImageViewLibro.setImageBitmap(myBitmapAgain)
 
-        btnAdquirirProducto.setOnClickListener { v ->
+        btnAdquirirLibro.setOnClickListener { v ->
             irActividadDatosComprador()
         }
     }

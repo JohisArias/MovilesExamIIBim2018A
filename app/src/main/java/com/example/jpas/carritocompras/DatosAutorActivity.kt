@@ -22,7 +22,6 @@ class DatosAutorActivity : AppCompatActivity() {
 
        idLibro = intent.getStringExtra("idLibro")
 
-        //Toast.makeText(this,idLibro,Toast.LENGTH_SHORT).show()
         button_ubicacion.setOnClickListener{ v: View? ->
             Toast.makeText(this, "Ubicacion enviada exitosamente", Toast.LENGTH_LONG).show();
         }
@@ -35,22 +34,22 @@ class DatosAutorActivity : AppCompatActivity() {
     fun crearOreden(){
         var cedula = txtCedulaComprador.text.toString().toInt()
         var sector = txtSector.text.toString()
-        var idProducto = idLibro.toString().toInt()
+        var idLibro = idLibro.toString().toInt()
 
-        var oredenCompra = OrdenCompra(0, cedula, sector, idProducto)
+        var oredenCompra = OrdenCompra(0, cedula, sector, idLibro)
         DatabaseOrdenCompra.insertarOrden(oredenCompra)
 
         Alerter.create(this)
-                .setTitle("Datos Enviados a DELIVERY")
+                .setTitle("Datos enviados a DELIVERY")
                 .setText("Orden enviada exitosamente")
                 .setDuration(10000)
                 .enableSwipeToDismiss()
                 .setOnClickListener(View.OnClickListener {
-                    irAbuscarAutor()
+                    irABuscarAutor()
                 }).show()
     }
 
-    fun irAbuscarAutor(){
+    fun irABuscarAutor(){
         txtCedulaComprador.setText("")
         txtSector.setText("")
         val intent = Intent(this,BuscarAutorActivity::class.java)

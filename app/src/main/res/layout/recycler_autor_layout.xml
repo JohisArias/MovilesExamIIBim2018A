@@ -7,7 +7,7 @@
 
 
         <TextView
-            android:id="@+id/txtNombreTienda"
+            android:id="@+id/txtNombreAutor"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
@@ -15,24 +15,24 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtDireccionTienda"
+            android:id="@+id/txtApellido"
             android:layout_width="210dp"
             android:layout_height="35dp"
-            android:layout_below="@+id/txtNombreTienda"
+            android:layout_below="@+id/txtNombreAutor"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtFechaAperturaTienda"
+            android:id="@+id/txtFechaNacimiento"
             android:layout_width="210dp"
             android:layout_height="35dp"
-            android:layout_below="@+id/txtDireccionTienda"
+            android:layout_below="@+id/txtApellido"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnDetalles"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:layout_alignBottom="@+id/txtFechaAperturaTienda"
+            android:layout_alignBottom="@+id/txtFechaNacimiento"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="32dp"
             android:background="@android:color/holo_blue_light"

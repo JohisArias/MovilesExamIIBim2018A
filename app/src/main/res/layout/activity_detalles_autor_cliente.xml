@@ -88,7 +88,7 @@
         tools:layout_editor_absoluteY="217dp" />
 
     <TextView
-        android:id="@+id/txtShowNombreT"
+        android:id="@+id/txtShowNombreAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="left"
@@ -102,7 +102,7 @@
         tools:layout_editor_absoluteY="64dp" />
 
     <TextView
-        android:id="@+id/txtShowDireccionT"
+        android:id="@+id/txtShowApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -110,12 +110,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreT"
+        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreAutor"
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="102dp" />
 
     <TextView
-        android:id="@+id/txtShowFechaApertura"
+        android:id="@+id/txtShowFechaNacimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -123,12 +123,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowDireccionT"
+        app:layout_constraintTop_toBottomOf="@+id/txtShowApellido"
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="141dp" />
 
     <TextView
-        android:id="@+id/txtShowNRUCS"
+        android:id="@+id/txtShowNumeroLibros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -136,24 +136,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaApertura"
+        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaNacimiento"
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="178dp" />
 
     <TextView
-        android:id="@+id/txtShowMat"
+        android:id="@+id/txtShowEcuatoriano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowNRUCS"
+        app:layout_constraintTop_toBottomOf="@+id/txtShowNumeroLibros"
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="217dp" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_producto"
+        android:id="@+id/recycler_view_libro"
         android:layout_width="386dp"
         android:layout_height="209dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +164,7 @@
         tools:layout_editor_absoluteY="314dp" />
 
     <TextView
-        android:id="@+id/txtShowIdTienda"
+        android:id="@+id/txtShowIdAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

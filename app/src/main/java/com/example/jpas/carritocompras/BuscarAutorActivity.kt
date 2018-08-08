@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_buscar_autor.*
 class BuscarAutorActivity : AppCompatActivity() {
 
     lateinit var adaptador: AutorClienteAdapter
-    lateinit var autors: ArrayList<Autor>
+    lateinit var autor: ArrayList<Autor>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,21 +27,21 @@ class BuscarAutorActivity : AppCompatActivity() {
     }
 
     fun consultarDatos(){
-        if (txtBuscarTienda.equals("")){
+        if (txtBuscarAutor.equals("")){
             Toast.makeText(this,"Ingrese parametro de busqueda",Toast.LENGTH_SHORT).show()
         }else{
-            var datoBusqueda:String = txtBuscarTienda.text.toString()
+            var datoBusqueda:String = txtBuscarAutor.text.toString()
 
-            autors = DatabaseAutor.buscarAutor(datoBusqueda)
+            autor = DatabaseAutor.buscarAutor(datoBusqueda)
 
             val layoutManager = LinearLayoutManager(this)
-            adaptador = AutorClienteAdapter(autors)
-            recyclerView_Resultados_Entrenador.layoutManager = layoutManager
-            recyclerView_Resultados_Entrenador.itemAnimator = DefaultItemAnimator()
-            recyclerView_Resultados_Entrenador.adapter = adaptador
+            adaptador = AutorClienteAdapter(autor)
+            recyclerView_Resultados_Autor.layoutManager = layoutManager
+            recyclerView_Resultados_Autor.itemAnimator = DefaultItemAnimator()
+            recyclerView_Resultados_Autor.adapter = adaptador
             adaptador.notifyDataSetChanged()
 
-            registerForContextMenu(recyclerView_Resultados_Entrenador)
+            registerForContextMenu(recyclerView_Resultados_Autor)
 
         }
     }

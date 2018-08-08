@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (estadoIngresoSistema==1){
-            Toast.makeText(this,"Bienvenido al Sistema: $usuarioActual",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Bienvenido!!: $usuarioActual",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, RegistrarUsuarios::class.java)
             intent.putExtra("valorRol",valorRol)
             startActivity(intent)

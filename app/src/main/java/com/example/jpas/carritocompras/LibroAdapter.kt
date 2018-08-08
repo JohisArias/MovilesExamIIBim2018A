@@ -24,16 +24,16 @@ class LibroAdapter(private val libroList: List<Libro>) :  RecyclerView.Adapter<L
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnCreateContextMenuListener {
 
         var nombres: TextView
-        var descripcion : TextView
+        var editorial : TextView
         var precio: TextView
         var detalles: Button
 
         lateinit var libro: Libro
 
         init {
-            nombres = view.findViewById(R.id.txtNombreTienda) as TextView
-            descripcion = view.findViewById(R.id.txtDireccionTienda) as TextView
-            precio = view.findViewById(R.id.txtFechaAperturaTienda) as TextView
+            nombres = view.findViewById(R.id.txtNombreAutor) as TextView
+            editorial = view.findViewById(R.id.txtApellido) as TextView
+            precio = view.findViewById(R.id.txtFechaNacimiento) as TextView
             detalles = view.findViewById(R.id.btnDetalles) as Button
             view.setOnCreateContextMenuListener(this)
         }
@@ -54,15 +54,15 @@ class LibroAdapter(private val libroList: List<Libro>) :  RecyclerView.Adapter<L
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val productoN = libroList[position]
-        holder.nombres.text = productoN.nombre
-        holder.descripcion.text = productoN.nombreEditorial
-        holder.precio.text = productoN.precio
-        holder.libro = productoN
+        val libro = libroList[position]
+        holder.nombres.text = libro.nombre
+        holder.editorial.text = libro.nombreEditorial
+        holder.precio.text = libro.precio
+        holder.libro = libro
         holder.detalles.setOnClickListener{
             v: View ->
             val intent = Intent(v.context, DetallesLibroActivity::class.java)
-            intent.putExtra("detallesAuto", productoN)
+            intent.putExtra("detallesLibro", libro)
             v.context.startActivity(intent)
         }
         holder.itemView.setOnLongClickListener {

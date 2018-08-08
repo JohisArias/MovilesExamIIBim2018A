@@ -17,7 +17,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textViewPokemon"
+        android:id="@+id/textViewLibro"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:text="Libro"
@@ -44,7 +44,7 @@
         tools:layout_editor_absoluteY="451dp" />
 
     <EditText
-        android:id="@+id/txtNumeroProd"
+        android:id="@+id/txtIsbn"
         android:layout_width="308dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
@@ -58,7 +58,7 @@
         tools:layout_editor_absoluteY="63dp" />
 
     <EditText
-        android:id="@+id/txtNombreProd"
+        android:id="@+id/txtNombreLibro"
         android:layout_width="307dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
@@ -67,12 +67,12 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroProd"
+        app:layout_constraintTop_toBottomOf="@+id/txtIsbn"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="103dp" />
 
     <EditText
-        android:id="@+id/txtDescripcionProd"
+        android:id="@+id/txtEditorial"
         android:layout_width="308dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
@@ -81,12 +81,12 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreProd"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreLibro"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="143dp" />
 
     <EditText
-        android:id="@+id/txtPrecioProd"
+        android:id="@+id/txtPrecio"
         android:layout_width="153dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
@@ -96,12 +96,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionProd"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditorial"
         tools:layout_editor_absoluteX="189dp"
         tools:layout_editor_absoluteY="183dp" />
 
     <EditText
-        android:id="@+id/txtFechaLanzamiento"
+        android:id="@+id/txtNumeroPaginas"
         android:layout_width="154dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
@@ -110,19 +110,19 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtPrecioProd"
+        app:layout_constraintStart_toEndOf="@+id/txtPrecio"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="183dp" />
 
     <EditText
-        android:id="@+id/txtAniosGarantia"
+        android:id="@+id/txtFechaPublicacion"
         android:layout_width="310dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="Fecha de Publicación"
         android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrecioProd"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrecio"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="223dp" />
 
@@ -142,7 +142,7 @@
         tools:layout_editor_absoluteY="453dp" />
 
     <ImageView
-        android:id="@+id/imageViewPokemon"
+        android:id="@+id/imageViewLibro"
         android:layout_width="271dp"
         android:layout_height="122dp"
         android:cropToPadding="false"
@@ -151,7 +151,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAniosGarantia"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaPublicacion"
         app:layout_constraintVertical_bias="0.076"
         tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="329dp" />
@@ -161,10 +161,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Imagen:"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewPokemon"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewLibro"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/txtAniosGarantia"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaPublicacion"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="294dp" />
 

@@ -55,11 +55,11 @@ class DatabaseLibro{
                 val precio = it["precio"] as String
                 val numeroPaginas = it["numeroPaginas"] as Int
                 val fechaPublicacion = it["fechaPublicacion"] as String
-                val imagenAuto = it["imagenLibro"] as String
+                val imagenLibro = it["imagenLibro"] as String
                 //val latitud = it["latitud"] as Double
                // val longitud = it["longitud"] as Double
-                val carros = Libro(id, isbn, nombre, editorial, precio, numeroPaginas, fechaPublicacion, imagenAuto, autorId, 0, 0)
-                libro.add(carros)
+                val libros = Libro(id, isbn, nombre, editorial, precio, numeroPaginas, fechaPublicacion, imagenLibro, autorId, 0, 0)
+                libro.add(libros)
             }
             return libro
         }//fin getLibroList

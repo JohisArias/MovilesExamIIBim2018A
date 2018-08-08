@@ -31,9 +31,9 @@ class OrdenesPendientesAdaptador(private val ordenesList: List<OrdenCompra>) :  
         lateinit var ordenn: OrdenCompra
 
         init {
-            cedula = view.findViewById(R.id.txtNombreTienda) as TextView
-            sector = view.findViewById(R.id.txtDireccionTienda) as TextView
-            idLibro = view.findViewById(R.id.txtFechaAperturaTienda) as TextView
+            cedula = view.findViewById(R.id.txtNombreAutor) as TextView
+            sector = view.findViewById(R.id.txtApellido) as TextView
+            idLibro = view.findViewById(R.id.txtFechaNacimiento) as TextView
             detalles = view.findViewById(R.id.btnDetalles) as Button
             view.setOnCreateContextMenuListener(this)
         }

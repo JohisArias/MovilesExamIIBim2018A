@@ -23,15 +23,14 @@ class DetallesLibroActivity : AppCompatActivity() {
 
 
         txtShowIsbn.text = libro?.isbn.toString()
-        txtShowNombreP.text = libro?.nombre
+        txtShowNombreLibro.text = libro?.nombre
         txtShowEditorial.text = libro?.nombreEditorial
         txtShowPrecio.text = libro?.precio
-        txtShowFechaL.text = libro?.numeroPaginas.toString()
-        txtShowGar.text = libro?.fechaPublicacion.toString()
+        txtShowNumeroPaginas.text = libro?.numeroPaginas.toString()
+        txtShowFechaPublicacion.text = libro?.fechaPublicacion.toString()
 
         myBitmapAgain = decodeBase64(libro?.imagenLibro.toString()!!)
         showImageViewPokemon.setImageBitmap(myBitmapAgain)
-
     }
 
     fun decodeBase64(input: String): Bitmap {

@@ -29,27 +29,26 @@ class DetallesAutorActivity : AppCompatActivity() {
 
         autor = intent.getParcelableExtra("detallesAutor")
 
-        txtShowIdTienda.text = autor?.id.toString()
-        txtShowNombreT.text = autor?.nombre
-        txtShowDireccionT.text = autor?.apellido
-        txtShowFechaApertura.text = autor?.fechaNacimiento
-        txtShowNRUCS.text = autor?.numeroLibros.toString()
-        txtShowMat.text = if(autor?.ecuatoriano == 1) "Si" else "No"
+        txtShowIdAutor.text = autor?.id.toString()
+        txtShowNombreAutor.text = autor?.nombre
+        txtShowApellido.text = autor?.apellido
+        txtShowFechaNacimiento.text = autor?.fechaNacimiento
+        txtShowNumeroLibros.text = autor?.numeroLibros.toString()
+        txtShowEcuatoriano.text = if(autor?.ecuatoriano == 1) "Si" else "No"
 
         libro = DatabaseLibro.getLibroList(autor?.id!!)
         Log.d("resultado",libro.toString())
 
         val layoutManager = LinearLayoutManager(this)
         adaptador = LibroAdapter(libro)
-        recycler_view_producto.layoutManager = layoutManager
-        recycler_view_producto.itemAnimator = DefaultItemAnimator()
-        recycler_view_producto.adapter = adaptador
+        recycler_view_libro.layoutManager = layoutManager
+        recycler_view_libro.itemAnimator = DefaultItemAnimator()
+        recycler_view_libro.adapter = adaptador
         adaptador.notifyDataSetChanged()
 
-        registerForContextMenu(recycler_view_producto)
+        registerForContextMenu(recycler_view_libro)
 
-        btnNuevoLibro.setOnClickListener { v: View? ->
-            irActividdadCrearLibro()
+        btnNuevoLibro.setOnClickListener { v: View? ->  irActividdadCrearLibro()
         }
     }
 
@@ -62,13 +61,13 @@ class DetallesAutorActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         var position = adaptador.getPosition()
-        var producto1 = libro[position]
+        var libro1 = libro[position]
 
         when (item.itemId) {
             R.id.item_menu_editar -> {
                 val intent = Intent(this, LibroActivity::class.java)
                 intent.putExtra("tipo", "Edit")
-                intent.putExtra("libro", producto1)
+                intent.putExtra("libro", libro1)
                 startActivity(intent)
                 return true
             }
@@ -76,7 +75,7 @@ class DetallesAutorActivity : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setMessage("Desea eliminar?")
                         .setPositiveButton("Si", { dialog, which ->
-                            DatabaseLibro.eliminarLibro(producto1.id)
+                            DatabaseLibro.eliminarLibro(libro1.id)
                             finish()
                             startActivity(intent)
                         }

@@ -24,23 +24,23 @@ class DetallesAutorClienteActivity : AppCompatActivity() {
 
         autor = intent.getParcelableExtra("detallesAutorCliente")
 
-        txtShowIdTienda.text = autor?.id.toString()
-        txtShowNombreT.text = autor?.nombre
-        txtShowDireccionT.text = autor?.apellido
-        txtShowFechaApertura.text = autor?.fechaNacimiento
-        txtShowNRUCS.text = autor?.numeroLibros.toString()
-        txtShowMat.text = if(autor?.ecuatoriano == 1) "Si" else "No"
+        txtShowIdAutor.text = autor?.id.toString()
+        txtShowNombreAutor.text = autor?.nombre
+        txtShowApellido.text = autor?.apellido
+        txtShowFechaNacimiento.text = autor?.fechaNacimiento
+        txtShowNumeroLibros.text = autor?.numeroLibros.toString()
+        txtShowEcuatoriano.text = if(autor?.ecuatoriano == 1) "Si" else "No"
 
         libro = DatabaseLibro.getLibroList(autor?.id!!)
         Log.d("resultado",libro.toString())
 
         val layoutManager = LinearLayoutManager(this)
         adaptador = LibroClienteAdapter(libro)
-        recycler_view_producto.layoutManager = layoutManager
-        recycler_view_producto.itemAnimator = DefaultItemAnimator()
-        recycler_view_producto.adapter = adaptador
+        recycler_view_libro.layoutManager = layoutManager
+        recycler_view_libro.itemAnimator = DefaultItemAnimator()
+        recycler_view_libro.adapter = adaptador
         adaptador.notifyDataSetChanged()
 
-        registerForContextMenu(recycler_view_producto)
+        registerForContextMenu(recycler_view_libro)
     }
 }

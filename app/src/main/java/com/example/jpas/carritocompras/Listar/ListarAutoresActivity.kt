@@ -16,7 +16,7 @@ import com.example.daro.carritocompras.R
 import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseAutor
 import kotlinx.android.synthetic.main.activity_listar_autores.*
 
-class ListarConductoresActivity : AppCompatActivity() {
+class ListarAutoresActivity : AppCompatActivity() {
 
     lateinit var adaptador: AutorAdapter
     lateinit var autors: ArrayList<Autor>
@@ -47,7 +47,7 @@ class ListarConductoresActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/html"
                 intent.putExtra(Intent.EXTRA_SUBJECT, "${getString(R.string.autor)} - ${getString(R.string.app_name)}")
-                intent.putExtra(Intent.EXTRA_TEXT, "${getString(R.string.name)} ${autor.nombres} ${autor.direccion}\n${getString(R.string.numero_libros)} ${autor.RUC}\n${getString(R.string.fecha_nacimiento)} ${autor.fechaApertura}")
+                intent.putExtra(Intent.EXTRA_TEXT, "${getString(R.string.name)} ${autor.nombre} ${autor.editorial}\n${getString(R.string.numero_libros)} ${autor.RUC}\n${getString(R.string.fecha_nacimiento)} ${autor.fechaNacimiento}")
                 startActivity(intent)
                 return true
             }*/

@@ -221,7 +221,7 @@
             tools:layout_editor_absoluteY="264dp" />
 
         <Button
-            android:id="@+id/btnAdquirirProducto"
+            android:id="@+id/btnAdquirirLibro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_blue_light"

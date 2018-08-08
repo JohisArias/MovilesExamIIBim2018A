@@ -24,7 +24,6 @@ class LibroActivity : AppCompatActivity() {
     lateinit var myBase64Image:String
     lateinit var myBitmapAgain:Bitmap
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_libro)
@@ -34,46 +33,44 @@ class LibroActivity : AppCompatActivity() {
         val type = intent.getStringExtra("tipo")
 
         if (type.equals("Edit")) {
-            textViewPokemon.text = "Editar Libro"
+            textViewLibro.text = "Editar Libro"
             libro = intent.getParcelableExtra("libro")
             fillFields()
             tipo = true
         }
 
-        btnGuardarLibro.setOnClickListener { v: View? ->
-            crearProducto()
+        btnGuardarLibro.setOnClickListener { v: View? ->  crearLibro()
         }
 
-        btnTomarFoto.setOnClickListener{v: View? ->
-            tomarFoto()
+        btnTomarFoto.setOnClickListener{v: View? -> tomarFoto()
 
         }
     }
 
     fun fillFields() {
-        txtNumeroProd.setText(libro?.isbn.toString())
-        txtNombreProd.setText(libro?.nombre)
-        txtDescripcionProd.setText(libro?.nombreEditorial)
-        txtPrecioProd.setText(libro?.precio)
-        txtFechaLanzamiento.setText(libro?.numeroPaginas!!)
-        txtAniosGarantia.setText(libro?.fechaPublicacion.toString())
+        txtIsbn.setText(libro?.isbn.toString())
+        txtNombreLibro.setText(libro?.nombre)
+        txtEditorial.setText(libro?.nombreEditorial)
+        txtPrecio.setText(libro?.precio)
+        txtNumeroPaginas.setText(libro?.numeroPaginas!!)
+        txtFechaPublicacion.setText(libro?.fechaPublicacion.toString())
     }
 
-    fun crearProducto(){
-        var numeroP = txtNumeroProd.text.toString().toInt()
-        var nombreP = txtNombreProd.text.toString()
-        var descripcion = txtDescripcionProd.text.toString()
-        var precio = txtPrecioProd.text.toString()
-        var fechaLanzamiento = txtFechaLanzamiento.text.toString()
-        var Garantia = txtAniosGarantia.text.toString().toInt()
+    fun crearLibro(){
+        var isbn = txtIsbn.text.toString().toInt()
+        var nombreLibro = txtNombreLibro.text.toString()
+        var nombreEditorial = txtEditorial.text.toString()
+        var precio = txtPrecio.text.toString()
+        var numeroPaginas = txtNumeroPaginas.text.toString()
+        var fechaPublicacion = txtFechaPublicacion.text.toString().toInt()
         var imagenLibro = myBase64Image
 
         if (!tipo){
-            var libro = Libro(0, numeroP, nombreP, descripcion, precio, fechaLanzamiento, Garantia, imagenLibro, idAutor, 0, 0)
+            var libro = Libro(0, isbn, nombreLibro, nombreEditorial, precio, numeroPaginas, fechaPublicacion, imagenLibro, idAutor, 0, 0)
             DatabaseLibro.insertarLibro(libro)
 
         }else{
-            var libro = Libro(libro?.id!!, numeroP, nombreP, descripcion, precio, fechaLanzamiento, Garantia, imagenLibro, idAutor, 0, 0)
+            var libro = Libro(libro?.id!!, isbn, nombreLibro, nombreEditorial, precio, numeroPaginas, fechaPublicacion, imagenLibro, idAutor, 0, 0)
             DatabaseLibro.actualizaLibro(libro)
         }
         finish()
@@ -93,11 +90,10 @@ class LibroActivity : AppCompatActivity() {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val extras = data.extras
             imageBitmap = extras!!.get("data") as Bitmap
-
             myBase64Image = encodeToBase64(imageBitmap, Bitmap.CompressFormat.JPEG, 100)
             myBitmapAgain = decodeBase64(myBase64Image)
 
-            imageViewPokemon.setImageBitmap(myBitmapAgain)
+            imageViewLibro.setImageBitmap(myBitmapAgain)
         }
     }
 

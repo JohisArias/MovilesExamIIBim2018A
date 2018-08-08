@@ -13,7 +13,7 @@ class DatabaseAutor{
     companion object {
 
         fun insertarAutor(autor: Autor){
-            "http://192.168.0.106:1337/Autor".httpPost(listOf("nombre" to autor.nombre, "apellido" to autor.apellido, "fechaNacimiento" to autor.fechaNacimiento, "numeroLibros" to autor.numeroLibros, "ecuatoriano" to autor.ecuatoriano))
+            "http://192.168.0.106:1337/Autor".httpPost(listOf("nombre" to autor.nombre, "editorial" to autor.apellido, "fechaNacimiento" to autor.fechaNacimiento, "numeroLibros" to autor.numeroLibros, "ecuatoriano" to autor.ecuatoriano))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -27,7 +27,7 @@ class DatabaseAutor{
         }
 
         fun actualizaAutor(autor: Autor) {
-            "http://192.168.0.106:1337/Autor/${autor.id}".httpPut(listOf("nombre" to conductor.nombre, "apellido" to conductor.apellido, "fechaNacimiento" to conductor.fechaNacimiento, "numeroLibros" to conductor.numeroLibros, "ecuatoriano" to conductor.ecuatoriano))
+            "http://192.168.0.106:1337/Autor/${autor.id}".httpPut(listOf("nombre" to autor.nombre, "editorial" to autor.apellido, "fechaNacimiento" to autor.fechaNacimiento, "numeroLibros" to autor.numeroLibros, "ecuatoriano" to autor.ecuatoriano))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -47,7 +47,7 @@ class DatabaseAutor{
             array.forEach {
                 val id = it["id"] as Int
                 val nombre = it["nombre"] as String
-                val apellio = it["apellido"] as String
+                val apellio = it["editorial"] as String
                 val fechaNacimiento = it["fechaNacimiento"] as String
                 val numeroLibros = it["numeroLibros"] as Int
                 val ecuatoriano = it["ecuatoriano"] as Int
@@ -71,7 +71,7 @@ class DatabaseAutor{
             array.forEach {
                 val id = it["id"] as Int
                 val nombre = it["nombre"] as String
-                val apellido = it["apellido"] as String
+                val apellido = it["editorial"] as String
                 val fechaNacimiento = it[ "fechaNacimiento"] as String
                 val numeroLibros= it["numeroLibros"] as Int
                 val ecuatoriano = it["ecuatoriano"] as Int

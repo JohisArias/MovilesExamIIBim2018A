@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.andreavillacis.av_exammoviles_iib.Listar.ListarConductoresActivity
+import com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity
 import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseAutor
 import com.example.jpas.carritocompras.R
 import kotlinx.android.synthetic.main.activity_autor.*
@@ -22,47 +22,46 @@ class AutorActivity : AppCompatActivity() {
         val type = intent.getStringExtra("tipo")
 
         if (type.equals("Edit")) {
-            textViewEntreador.text = "Editar Autor"
+            textViewAutor.text = "Editar Autor"
             autor = intent.getParcelableExtra("autor")
             fillFields()
             tipo = true
         }
-        btnGuardarTienda.setOnClickListener { v: View? ->
-            crearTienda()
+        btnGuardarAutor.setOnClickListener { v: View? ->  crearAutor()
         }
     }
 
     fun fillFields() {
-        txtNombreTienda.setText(autor?.nombre)
-        txtDireccionTienda.setText(autor?.apellido)
-        txtFechaAperturaTienda.setText(autor?.fechaNacimiento)
-        txtNumeroRuc.setText(autor?.numeroLibros.toString())
+        txtNombreAutor.setText(autor?.nombre)
+        txtApellido.setText(autor?.apellido)
+        txtFechaNacimiento.setText(autor?.fechaNacimiento)
+        txtNumeroLibros.setText(autor?.numeroLibros.toString())
         if (autor?.ecuatoriano == 1) {
-            switchMatriz.toggle()
+            switchEcuatoriano.toggle()
         }
     }
 
-    fun crearTienda(){
-        var nombreT = txtNombreTienda.text.toString()
-        var direccion = txtDireccionTienda.text.toString()
-        var fechaA = txtFechaAperturaTienda.text.toString()
-        var RUCs = txtNumeroRuc.text.toString().toInt()
-        var matriz = if (switchMatriz.isChecked) 1 else 0
+    fun crearAutor(){
+        var nombreAutor = txtNombreAutor.text.toString()
+        var apellido = txtApellido.text.toString()
+        var fechaNacimiento = txtFechaNacimiento.text.toString()
+        var numeroLibros = txtNumeroLibros.text.toString().toInt()
+        var ecuatoriano = if (switchEcuatoriano.isChecked) 1 else 0
 
         if (!tipo){
 
-            var tienda = Autor(0, nombreT, direccion, fechaA, RUCs, matriz, 0, 0)
-            DatabaseAutor.insertarAutor(tienda)
+            var autor = Autor(0, nombreAutor, apellido, fechaNacimiento, numeroLibros, ecuatoriano, 0, 0)
+            DatabaseAutor.insertarAutor(autor)
 
         }else{
-            var tienda = Autor(autor?.id!!, nombreT, direccion, fechaA, RUCs, matriz, 0, 0)
-            DatabaseAutor.actualizaAutor(tienda)
+            var autor = Autor(autor?.id!!, nombreAutor, apellido, fechaNacimiento, numeroLibros, ecuatoriano, 0, 0)
+            DatabaseAutor.actualizaAutor(autor)
         }
-        irListarEntrenadorActivity()
+        irListarAutorActivity()
     }
 
-    fun irListarEntrenadorActivity(){
-        val intent = Intent(this, ListarConductoresActivity::class.java)
+    fun irListarAutorActivity(){
+        val intent = Intent(this, ListarAutoresActivity::class.java)
         startActivity(intent)
     }
 }

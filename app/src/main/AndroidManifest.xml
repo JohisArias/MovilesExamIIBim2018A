@@ -43,7 +43,7 @@
         </activity>
         <activity android:name=".RegistrarPersonajes" />
 
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.ListarConductoresActivity" />
+        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity" />
         <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesAutorActivity" />
         <activity android:name=".DeliveryActivity" />
         <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesLibroActivity" />
@@ -63,7 +63,7 @@
         -->
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
     </application>
 </manifest>

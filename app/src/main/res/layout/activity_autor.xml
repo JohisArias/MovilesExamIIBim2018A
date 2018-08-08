@@ -8,7 +8,7 @@
     tools:context=".ConductorActivity">
 
     <TextView
-        android:id="@+id/textViewEntreador"
+        android:id="@+id/textViewAutor"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:textSize="24sp"
@@ -24,7 +24,7 @@
         tools:text="Autor" />
 
     <Button
-        android:id="@+id/btnGuardarTienda"
+        android:id="@+id/btnGuardarAutor"
         android:layout_width="137dp"
         android:layout_height="54dp"
         android:background="@android:color/holo_blue_light"
@@ -40,7 +40,7 @@
         tools:layout_editor_absoluteY="426dp" />
 
     <EditText
-        android:id="@+id/txtNombreTienda"
+        android:id="@+id/txtNombreAutor"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
@@ -54,7 +54,7 @@
         tools:layout_editor_absoluteY="52dp" />
 
     <EditText
-        android:id="@+id/txtDireccionTienda"
+        android:id="@+id/txtApellido"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
@@ -64,12 +64,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreTienda"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAutor"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="109dp" />
 
     <EditText
-        android:id="@+id/txtFechaAperturaTienda"
+        android:id="@+id/txtFechaNacimiento"
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
@@ -79,12 +79,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDireccionTienda"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="161dp" />
 
     <EditText
-        android:id="@+id/txtNumeroRuc"
+        android:id="@+id/txtNumeroLibros"
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
@@ -94,12 +94,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaAperturaTienda"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimiento"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="222dp" />
 
     <Switch
-        android:id="@+id/switchMatriz"
+        android:id="@+id/switchEcuatoriano"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:text="Es ecuatoriano?"
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroRuc"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibros"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="290dp" />
 
