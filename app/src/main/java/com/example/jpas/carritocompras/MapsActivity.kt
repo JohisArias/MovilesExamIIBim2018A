@@ -1,4 +1,4 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_maps.*
+
 
 class MapsActivity :AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCameraMoveStartedListener,
         GoogleMap.OnCameraMoveListener,
@@ -62,11 +63,10 @@ class MapsActivity :AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCameraM
         with(googleMap) {
 
 
-            buttonAutor.setOnClickListener { v ->
+            buttonMapaAutor.setOnClickListener { v ->
                 anadirMarcador(materiaLatLang, "Marcador 1")
                 moverCamaraPorPosicion(materia)
             }
-
         }
         // Add a marker in Sydney and move the camera
     }

@@ -1,13 +1,12 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
-import com.example.andreavillacis.av_exammoviles_iib.Detalle.DetalleOrdenActivity
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenCompra
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.Detalle.DetalleOrdenActivity
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenCompra
 
 class OrdenesPendientesAdaptador(private val ordenesList: List<OrdenCompra>) :  RecyclerView.Adapter<OrdenesPendientesAdaptador.MyViewHolder>(){
 
@@ -28,12 +27,12 @@ class OrdenesPendientesAdaptador(private val ordenesList: List<OrdenCompra>) :  
         var idLibro: TextView
         var detalles: Button
 
-        lateinit var ordenn: OrdenCompra
+        lateinit var orden: OrdenCompra
 
         init {
-            cedula = view.findViewById(R.id.txtNombreAutor) as TextView
-            sector = view.findViewById(R.id.txtApellido) as TextView
-            idLibro = view.findViewById(R.id.txtFechaNacimiento) as TextView
+            cedula = view.findViewById(R.id.txtShowCedula) as TextView
+            sector = view.findViewById(R.id.txtShowSector) as TextView
+            idLibro = view.findViewById(R.id.txtShowIdLibro) as TextView
             detalles = view.findViewById(R.id.btnDetalles) as Button
             view.setOnCreateContextMenuListener(this)
         }
@@ -54,7 +53,7 @@ class OrdenesPendientesAdaptador(private val ordenesList: List<OrdenCompra>) :  
         holder.cedula.text = orden.cedulaComprador.toString()
         holder.sector.text = orden.sector
         holder.idLibro.text = orden.idLibro.toString()
-        holder.ordenn = orden
+        holder.orden = orden
         holder.detalles.setOnClickListener{
             v: View ->
             val intent = Intent(v.context, DetalleOrdenActivity::class.java)

@@ -1,12 +1,11 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenCompra
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseOrdenCompra
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenCompra
+import com.example.jpas.carritocompras.Database.DatabaseOrdenCompra
 import kotlinx.android.synthetic.main.activity_delivery.*
 
 class DeliveryActivity : AppCompatActivity() {

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConductorActivity">
+    tools:context=".AutorActivity">
 
     <TextView
         android:id="@+id/textViewAutor"
@@ -25,19 +25,20 @@
 
     <Button
         android:id="@+id/btnGuardarAutor"
-        android:layout_width="137dp"
-        android:layout_height="54dp"
+        android:layout_width="129dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="44dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/guardar"
         android:textColor="@android:color/background_light"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintHorizontal_bias="0.501"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/switchEcuatoriano"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="426dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtNombreAutor"
@@ -47,10 +48,12 @@
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="52dp" />
 
     <EditText
@@ -61,11 +64,13 @@
         android:ems="10"
         android:hint="Apellido"
         android:inputType="textPersonName"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAutor"
-        tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="109dp" />
 
     <EditText
@@ -76,11 +81,13 @@
         android:ems="10"
         android:hint="Fecha de Nacimiento"
         android:inputType="date"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtApellido"
-        tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="161dp" />
 
     <EditText
@@ -91,11 +98,13 @@
         android:ems="10"
         android:hint="Número de libros"
         android:inputType="number"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimiento"
-        tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="222dp" />
 
     <Switch
@@ -105,11 +114,13 @@
         android:text="Es ecuatoriano?"
         android:textColorLink="?attr/colorPrimaryDark"
         android:textSize="18sp"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibros"
-        tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="290dp" />
 
 </android.support.constraint.ConstraintLayout>

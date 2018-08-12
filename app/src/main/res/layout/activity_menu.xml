@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".RegistrarPersonajes">
+    tools:context=".RegistrarUsuarios">
 
 
     <Button
-        android:id="@+id/btnCrearEntrenador"
+        android:id="@+id/btnCrearAutor"
         android:layout_width="167dp"
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
@@ -28,28 +28,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnListarEntrenador"
+        android:id="@+id/btnListarAutor"
         android:layout_width="164dp"
         android:layout_height="53dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="64dp"
         android:background="@android:color/holo_blue_light"
         android:text="listar autor"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/btnCrearEntrenador"
+        app2:layout_constraintTop_toBottomOf="@+id/btnCrearAutor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearEntrenador" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearAutor" />
 
     <Button
-        android:id="@+id/btnBuscarEntrenador"
+        android:id="@+id/btnBuscarAutor"
         android:layout_width="167dp"
         android:layout_height="49dp"
         android:layout_marginBottom="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/holo_blue_light"
         android:text="Buscar autor"
         android:textColor="@android:color/background_light"
@@ -58,12 +58,12 @@
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintHorizontal_bias="0.502"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/btnListarEntrenador"
-        app2:layout_constraintVertical_bias="0.713"
+        app2:layout_constraintTop_toBottomOf="@+id/btnListarAutor"
+        app2:layout_constraintVertical_bias="0.135"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListarEntrenador" />
+        app:layout_constraintTop_toBottomOf="@+id/btnListarAutor" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,10 +6,8 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
-import com.example.andreavillacis.av_exammoviles_iib.Conductor.AutorClienteAdapter
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseAutor
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.EntidadesParcelable.Autor
+import com.example.jpas.carritocompras.Database.DatabaseAutor
 import kotlinx.android.synthetic.main.activity_buscar_autor.*
 
 class BuscarAutorActivity : AppCompatActivity() {

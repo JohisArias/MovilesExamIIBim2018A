@@ -1,4 +1,4 @@
-package com.example.andreavillacis.av_exammoviles_iib.Auto
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -10,10 +10,8 @@ import kotlinx.android.synthetic.main.activity_libro.*
 import java.io.ByteArrayOutputStream
 import android.graphics.BitmapFactory
 import android.util.Base64
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseLibro
-import com.example.jpas.carritocompras.R
-
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
+import com.example.jpas.carritocompras.Database.DatabaseLibro
 
 class LibroActivity : AppCompatActivity() {
 
@@ -61,8 +59,8 @@ class LibroActivity : AppCompatActivity() {
         var nombreLibro = txtNombreLibro.text.toString()
         var nombreEditorial = txtEditorial.text.toString()
         var precio = txtPrecio.text.toString()
-        var numeroPaginas = txtNumeroPaginas.text.toString()
-        var fechaPublicacion = txtFechaPublicacion.text.toString().toInt()
+        var numeroPaginas = txtNumeroPaginas.text.toString().toInt()
+        var fechaPublicacion = txtFechaPublicacion.text.toString()
         var imagenLibro = myBase64Image
 
         if (!tipo){

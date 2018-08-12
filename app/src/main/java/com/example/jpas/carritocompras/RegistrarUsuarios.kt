@@ -1,19 +1,16 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.andreavillacis.av_exammoviles_iib.Conductor.AutorActivity
-import com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.Listar.ListarAutoresActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class RegistrarUsuarios : AppCompatActivity() {
 
     lateinit var rol:String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,28 +19,28 @@ class RegistrarUsuarios : AppCompatActivity() {
         rol = intent.getStringExtra("valorRol")
 
         if (rol.equals("VENDEDOR",true)){
-            btnBuscarEntrenador.visibility = View.INVISIBLE
+            btnBuscarAutor.visibility = View.INVISIBLE
 
         }else if (rol.equals("DELIVERY",true)){
-            btnBuscarEntrenador.visibility = View.INVISIBLE
-            btnCrearEntrenador.visibility = View.INVISIBLE
-            btnListarEntrenador.visibility = View.INVISIBLE
+            btnBuscarAutor.visibility = View.INVISIBLE
+            btnCrearAutor.visibility = View.INVISIBLE
+            btnListarAutor.visibility = View.INVISIBLE
             irActividadDelivery()
 
         }else{
-            btnCrearEntrenador.visibility = View.INVISIBLE
-            btnListarEntrenador.visibility = View.INVISIBLE
+            btnCrearAutor.visibility = View.INVISIBLE
+            btnListarAutor.visibility = View.INVISIBLE
         }
 
-      btnCrearEntrenador.setOnClickListener { v: View? ->
+      btnCrearAutor.setOnClickListener { v: View? ->
           irAutorActivity()
       }
 
-        btnListarEntrenador.setOnClickListener { v: View? ->
+        btnListarAutor.setOnClickListener { v: View? ->
             irListarAutoresActivity()
         }
 
-        btnBuscarEntrenador.setOnClickListener { v: View? ->
+        btnBuscarAutor.setOnClickListener { v: View? ->
             irBuscarAutorActivity()
         }
     }

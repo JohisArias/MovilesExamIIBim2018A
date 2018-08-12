@@ -1,14 +1,14 @@
-package com.example.andreavillacis.av_exammoviles_iib.Detalle
+package com.example.jpas.carritocompras.Detalle
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
-import com.example.andreavillacis.av_exammoviles_iib.Auto.LibroClienteAdapter
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseLibro
+import com.example.jpas.carritocompras.LibroClienteAdapter
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
+import com.example.jpas.carritocompras.EntidadesParcelable.Autor
+import com.example.jpas.carritocompras.Database.DatabaseLibro
 import com.example.jpas.carritocompras.R
 import kotlinx.android.synthetic.main.activity_detalles_autor.*
 

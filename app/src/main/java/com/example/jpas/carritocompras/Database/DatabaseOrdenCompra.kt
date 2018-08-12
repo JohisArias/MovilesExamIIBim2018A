@@ -1,12 +1,12 @@
-package com.example.andreavillacis.av_exammoviles_iib.database
+package com.example.jpas.carritocompras.Database
 
 import android.os.StrictMode
 import android.util.Log
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenCompra
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenDetalles
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenCompra
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenDetalles
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
 

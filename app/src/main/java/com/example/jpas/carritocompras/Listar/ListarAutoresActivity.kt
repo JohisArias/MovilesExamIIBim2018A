@@ -1,4 +1,4 @@
-package com.example.andreavillacis.av_exammoviles_iib.Listar
+package com.example.jpas.carritocompras.Listar
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,12 +8,11 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
-import com.example.andreavillacis.av_exammoviles_iib.Conductor.AutorActivity
-import com.example.andreavillacis.av_exammoviles_iib.Conductor.AutorAdapter
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.daro.carritocompras.R
-
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseAutor
+import com.example.jpas.carritocompras.AutorActivity
+import com.example.jpas.carritocompras.AutorAdapter
+import com.example.jpas.carritocompras.EntidadesParcelable.Autor
+import com.example.jpas.carritocompras.Database.DatabaseAutor
+import com.example.jpas.carritocompras.R
 import kotlinx.android.synthetic.main.activity_listar_autores.*
 
 class ListarAutoresActivity : AppCompatActivity() {
@@ -23,19 +22,18 @@ class ListarAutoresActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listar_conductores)
+        setContentView(R.layout.activity_listar_autores)
 
         autors = DatabaseAutor.getList()
 
-
         val layoutManager = LinearLayoutManager(this)
         adaptador = AutorAdapter(autors)
-        recyclerViewEntrenador.layoutManager = layoutManager
-        recyclerViewEntrenador.itemAnimator = DefaultItemAnimator()
-        recyclerViewEntrenador.adapter = adaptador
+        recyclerViewAutor.layoutManager = layoutManager
+        recyclerViewAutor.itemAnimator = DefaultItemAnimator()
+        recyclerViewAutor.adapter = adaptador
         adaptador.notifyDataSetChanged()
 
-        registerForContextMenu(recyclerViewEntrenador)
+        registerForContextMenu(recyclerViewAutor)
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {

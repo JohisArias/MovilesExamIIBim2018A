@@ -1,11 +1,11 @@
-package com.example.andreavillacis.av_exammoviles_iib.database
+package com.example.jpas.carritocompras.Database
 
 import android.os.StrictMode
 import android.util.Log
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
 import com.github.kittinunf.fuel.httpDelete
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
@@ -41,10 +41,10 @@ class DatabaseLibro{
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
             val (request, response, result) = "http://192.168.0.106:1337/Libro?autorId=$autorId".httpGet().responseString()
-            val jsonStringPokemon = result.get()
+            val jsonStringLibro = result.get()
 
             val parser = Parser()
-            val stringBuilder = StringBuilder(jsonStringPokemon)
+            val stringBuilder = StringBuilder(jsonStringLibro)
             val array = parser.parse(stringBuilder) as JsonArray<JsonObject>
 
             array.forEach {

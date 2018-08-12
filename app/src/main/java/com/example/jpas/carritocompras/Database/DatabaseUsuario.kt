@@ -1,9 +1,9 @@
-package com.example.andreavillacis.av_exammoviles_iib.database
+package com.example.jpas.carritocompras.Database
+
 import android.os.StrictMode
 import android.util.Log
-
 import com.beust.klaxon.*
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Usuario
+import com.example.jpas.carritocompras.EntidadesParcelable.Usuario
 import com.github.kittinunf.fuel.*
 
 class DatabaseUsuario{

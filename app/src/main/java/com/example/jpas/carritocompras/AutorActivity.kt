@@ -1,13 +1,12 @@
-package com.example.andreavillacis.av_exammoviles_iib.Conductor
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseAutor
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.EntidadesParcelable.Autor
+import com.example.jpas.carritocompras.Listar.ListarAutoresActivity
+import com.example.jpas.carritocompras.Database.DatabaseAutor
 import kotlinx.android.synthetic.main.activity_autor.*
 
 class AutorActivity : AppCompatActivity() {
@@ -27,7 +26,7 @@ class AutorActivity : AppCompatActivity() {
             fillFields()
             tipo = true
         }
-        btnGuardarAutor.setOnClickListener { v: View? ->  crearAutor()
+        btnGuardarAutor.setOnClickListener { _: View? ->  crearAutor()
         }
     }
 

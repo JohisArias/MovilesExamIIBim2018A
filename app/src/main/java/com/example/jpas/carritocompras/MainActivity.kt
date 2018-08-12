@@ -1,13 +1,12 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Usuario
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseUsuario
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.EntidadesParcelable.Usuario
+import com.example.jpas.carritocompras.Database.DatabaseUsuario
 import com.onesignal.OneSignal
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -48,12 +47,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (estadoIngresoSistema==1){
-            Toast.makeText(this,"Bienvenido!!: $usuarioActual",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Hola $usuarioActual! ^^",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, RegistrarUsuarios::class.java)
             intent.putExtra("valorRol",valorRol)
             startActivity(intent)
         }else{
-            Toast.makeText(this,"Datos o Usuario Incorrectos",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Usuario Incorrecto",Toast.LENGTH_SHORT).show()
         }
     }
 }

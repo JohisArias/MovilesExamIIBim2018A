@@ -1,4 +1,4 @@
-package com.example.andreavillacis.av_exammoviles_iib.Detalle
+package com.example.jpas.carritocompras.Detalle
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -6,8 +6,8 @@ import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
-import com.example.daro.carritocompras.DatosAutorActivity
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
+import com.example.jpas.carritocompras.DatosCompradorActivity
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
 import com.example.jpas.carritocompras.R
 import kotlinx.android.synthetic.main.activity_detalles_libro_cliente.*
 
@@ -44,7 +44,7 @@ class DetallesLibroClienteActivity : AppCompatActivity() {
     }
 
     fun irActividadDatosComprador(){
-        val intent = Intent(this, DatosAutorActivity::class.java)
+        val intent = Intent(this, DatosCompradorActivity::class.java)
         idLibro = libro?.id.toString()
         intent.putExtra("idLibro",idLibro)
         startActivity(intent)

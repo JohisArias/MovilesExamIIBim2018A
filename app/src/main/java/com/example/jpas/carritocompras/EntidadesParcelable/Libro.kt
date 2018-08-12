@@ -1,4 +1,4 @@
-package com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable
+package com.example.jpas.carritocompras.EntidadesParcelable
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,8 +8,8 @@ class Libro(var id: Int,
             var nombre: String,
             var nombreEditorial: String,
             var precio: String,
-            var numeroPaginas: String,
-            var fechaPublicacion: Int,
+            var numeroPaginas: Int,
+            var fechaPublicacion: String,
             var imagenLibro:String,
             var autorId:Int,
             var createdAt: Long,

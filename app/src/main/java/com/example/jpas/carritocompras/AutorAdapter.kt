@@ -1,13 +1,12 @@
-package com.example.andreavillacis.av_exammoviles_iib.Conductor
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
-import com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesAutorActivity
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Autor
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.Detalle.DetallesAutorActivity
+import com.example.jpas.carritocompras.EntidadesParcelable.Autor
 
 class AutorAdapter(private val autorList: List<Autor>) :  RecyclerView.Adapter<AutorAdapter.MyViewHolder>(){
 

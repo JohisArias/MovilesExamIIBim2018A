@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity">
+    tools:context=".Listar.ListarAutoresActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewEntrenador"
+        android:id="@+id/recyclerViewAutor"
         android:layout_width="372dp"
         android:layout_height="238dp"
         app:layout_constraintBottom_toBottomOf="parent"

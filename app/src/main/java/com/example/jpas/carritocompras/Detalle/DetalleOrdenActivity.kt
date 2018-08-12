@@ -1,13 +1,13 @@
-package com.example.andreavillacis.av_exammoviles_iib.Detalle
+package com.example.jpas.carritocompras.Detalle
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenCompra
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenDetalles
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseOrdenCompra
-import com.example.daro.carritocompras.MapsActivity
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenCompra
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenDetalles
+import com.example.jpas.carritocompras.Database.DatabaseOrdenCompra
+import com.example.jpas.carritocompras.MapsActivity
 import com.example.jpas.carritocompras.R
 import com.tapadoo.alerter.Alerter
 import kotlinx.android.synthetic.main.activity_detalle_orden.*
@@ -26,7 +26,7 @@ class DetalleOrdenActivity : AppCompatActivity() {
 
         txtShowCedula.text = oredenes?.cedulaComprador.toString()
         txtShowSector.text = oredenes?.sector
-        txtShowIdP.text = oredenes?.idLibro.toString()
+        txtShowIdLibro.text = oredenes?.idLibro.toString()
 
         button_mapa.setOnClickListener{v: View? ->
             irActividadMapas()
@@ -43,8 +43,8 @@ class DetalleOrdenActivity : AppCompatActivity() {
 
     fun guardarDatosOrdenDetalles(){
         val fechaEnvio = txtFechaEnvio.text.toString()
-        val costoLibro = txtPrecioProduc.text.toString().toInt()
-        val idLibro = txtShowIdP.text.toString().toInt()
+        val costoLibro = txtPrecioLibro.text.toString().toInt()
+        val idLibro = txtShowIdLibro.text.toString().toInt()
         val ordenDetalles = OrdenDetalles(0, fechaEnvio, costoLibro, idLibro)
         DatabaseOrdenCompra.insertarOrdenDetalles(ordenDetalles)
         Alerter.create(this)

@@ -41,18 +41,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrarPersonajes" />
+        <activity android:name=".RegistrarUsuarios" />
 
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.ListarAutoresActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesAutorActivity" />
+        <activity android:name=".Listar.ListarAutoresActivity" />
+        <activity android:name=".Detalle.DetallesAutorActivity" />
         <activity android:name=".DeliveryActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesLibroActivity" />
-        <activity android:name=".BuscarConductorActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.ListarConductorClienteActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesAutorClienteActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesLibroClienteActivity" />
+        <activity android:name=".Detalle.DetallesLibroActivity" />
+        <activity android:name=".BuscarAutorActivity" />
+        <activity android:name=".Listar.ListarAutorClienteActivity" />
+        <activity android:name=".Detalle.DetallesAutorClienteActivity" />
+        <activity android:name=".Detalle.DetallesLibroClienteActivity" />
         <activity android:name=".DatosCompradorActivity" />
-        <activity android:name="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetalleOrdenActivity" />
+        <activity android:name=".Detalle.DetalleOrdenActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -63,7 +64,7 @@
         -->
 
         <activity
-            android:name="com.example.andreavillacis.av_exammoviles_iib.Listar.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
     </application>
 </manifest>

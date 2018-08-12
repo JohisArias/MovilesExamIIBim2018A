@@ -1,13 +1,12 @@
-package com.example.andreavillacis.av_exammoviles_iib.Auto
+package com.example.jpas.carritocompras
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
-import com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesLibroActivity
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.Detalle.DetallesLibroActivity
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
 
 class LibroAdapter(private val libroList: List<Libro>) :  RecyclerView.Adapter<LibroAdapter.MyViewHolder>(){
 

@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.andreavillacis.av_exammoviles_iib.Detalle.DetallesLibroClienteActivity">
+    tools:context=".Detalle.DetallesLibroClienteActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewLibro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="60dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -47,12 +47,12 @@
         android:text="Nombre "
         android:textSize="18sp"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/textView2"
+        app2:layout_constraintTop_toBottomOf="@+id/textViewNombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewFechaNacimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -61,22 +61,22 @@
         android:textSize="18sp"
         app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewApellido"
         tools:layout_editor_absoluteY="135dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewNumeroLibros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Precio"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimiento"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="169dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewEcuatoriano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -85,11 +85,11 @@
         android:textSize="18sp"
         app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumeroLibros"
         tools:layout_editor_absoluteY="207dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewFechaPublicacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -98,7 +98,7 @@
         android:textSize="18sp"
         app2:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEcuatoriano"
         tools:layout_editor_absoluteY="243dp" />
 
     <TextView
@@ -110,10 +110,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView9"
+        app2:layout_constraintStart_toEndOf="@+id/textViewFechaPublicacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaPublicacion"
         app:layout_constraintTop_toBottomOf="@+id/txtShowNumeroPaginas"
         tools:layout_editor_absoluteY="243dp" />
 
@@ -126,10 +126,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView2"
+        app2:layout_constraintStart_toEndOf="@+id/textViewNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.623"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textViewNombre"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="60dp" />
 
@@ -142,10 +142,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView3"
+        app2:layout_constraintStart_toEndOf="@+id/textViewApellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textViewApellido"
         app:layout_constraintTop_toBottomOf="@+id/txtShowIsbn"
         tools:layout_editor_absoluteY="97dp" />
 
@@ -158,10 +158,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView4"
+        app2:layout_constraintStart_toEndOf="@+id/textViewFechaNacimiento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.569"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaNacimiento"
         app:layout_constraintTop_toBottomOf="@+id/txtShowNombreLibro"
         tools:layout_editor_absoluteY="135dp" />
 
@@ -174,10 +174,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView5"
+        app2:layout_constraintStart_toEndOf="@+id/textViewNumeroLibros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumeroLibros"
         app:layout_constraintTop_toBottomOf="@+id/txtShowEditorial"
         tools:layout_editor_absoluteY="169dp" />
 
@@ -190,10 +190,10 @@
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
-        app2:layout_constraintStart_toEndOf="@+id/textView6"
+        app2:layout_constraintStart_toEndOf="@+id/textViewEcuatoriano"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textViewEcuatoriano"
         app:layout_constraintTop_toBottomOf="@+id/txtShowPrecio"
         tools:layout_editor_absoluteY="207dp" />
 

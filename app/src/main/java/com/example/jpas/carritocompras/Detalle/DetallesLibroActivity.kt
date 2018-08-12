@@ -1,11 +1,11 @@
-package com.example.andreavillacis.av_exammoviles_iib.Detalle
+package com.example.jpas.carritocompras.Detalle
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.Libro
+import com.example.jpas.carritocompras.EntidadesParcelable.Libro
 import com.example.jpas.carritocompras.R
 import kotlinx.android.synthetic.main.activity_detalles_libro.*
 
@@ -30,7 +30,7 @@ class DetallesLibroActivity : AppCompatActivity() {
         txtShowFechaPublicacion.text = libro?.fechaPublicacion.toString()
 
         myBitmapAgain = decodeBase64(libro?.imagenLibro.toString()!!)
-        showImageViewPokemon.setImageBitmap(myBitmapAgain)
+        showImageViewLibro.setImageBitmap(myBitmapAgain)
     }
 
     fun decodeBase64(input: String): Bitmap {

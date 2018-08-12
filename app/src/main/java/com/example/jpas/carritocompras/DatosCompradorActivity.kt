@@ -1,4 +1,4 @@
-package com.example.daro.carritocompras
+package com.example.jpas.carritocompras
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,12 +7,11 @@ import com.tapadoo.alerter.Alerter
 import kotlinx.android.synthetic.main.activity_datos_comprador.*
 import android.content.Intent
 import android.widget.Toast
-import com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable.OrdenCompra
-import com.example.andreavillacis.av_exammoviles_iib.database.DatabaseOrdenCompra
-import com.example.jpas.carritocompras.R
+import com.example.jpas.carritocompras.EntidadesParcelable.OrdenCompra
+import com.example.jpas.carritocompras.Database.DatabaseOrdenCompra
 
 
-class DatosAutorActivity : AppCompatActivity() {
+class DatosCompradorActivity : AppCompatActivity() {
 
     lateinit var idLibro:String
 

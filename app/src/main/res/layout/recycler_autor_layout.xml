@@ -12,7 +12,8 @@
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true" />
 
         <TextView
             android:id="@+id/txtApellido"
@@ -37,13 +38,16 @@
             android:layout_marginEnd="32dp"
             android:background="@android:color/holo_blue_light"
             android:text="@string/detalles"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp" />
 
         <View
             android:id="@+id/divider2"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="49dp"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:background="@color/colorPrimary" />
 

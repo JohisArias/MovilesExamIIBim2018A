@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-libro"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,18 +10,27 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutDatos"
-        android:layout_width="266dp"
-        android:layout_height="183dp"
+        android:layout_width="0dp"
+        android:layout_height="188dp"
+        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="90dp"
         android:orientation="vertical"
         android:padding="18dp"
+        app2:layout_constraintBottom_toTopOf="@+id/linearLayoutBoton"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.0"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="127dp">
+        app:layout_constraintVertical_bias="0.623">
 
         <EditText
             android:id="@+id/txtUsername"
@@ -56,17 +66,21 @@
     <LinearLayout
         android:id="@+id/linearLayoutBoton"
         android:layout_width="143dp"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         android:padding="10dp"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/linearLayoutDatos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="415dp">
+        app:layout_constraintVertical_bias="0.98">
 
         <Button
             android:id="@+id/btn_login"
@@ -75,6 +89,7 @@
             android:background="@android:color/holo_blue_light"
             android:text="@string/login"
             android:textColor="@android:color/background_light" />
+
 
     </LinearLayout>
 

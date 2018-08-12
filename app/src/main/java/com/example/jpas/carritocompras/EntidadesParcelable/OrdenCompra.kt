@@ -1,4 +1,4 @@
-package com.example.andreavillacis.av_exammoviles_iib.EntidadesParcelable
+package com.example.jpas.carritocompras.EntidadesParcelable
 
 import android.os.Parcel
 import android.os.Parcelable
