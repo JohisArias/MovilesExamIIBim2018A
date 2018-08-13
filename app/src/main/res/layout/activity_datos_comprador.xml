@@ -28,16 +28,17 @@
         android:id="@+id/textViewComprador"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
+        android:layout_marginTop="16dp"
         android:text="Comprador"
         android:textSize="24sp"
         android:textStyle="bold"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintHorizontal_bias="0.501"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtCedulaComprador"

@@ -48,6 +48,7 @@
         <activity android:name=".DeliveryActivity" />
         <activity android:name=".Detalle.DetallesLibroActivity" />
         <activity android:name=".BuscarAutorActivity" />
+        <activity android:name=".AutorActivity" />
         <activity android:name=".Listar.ListarAutorClienteActivity" />
         <activity android:name=".Detalle.DetallesAutorClienteActivity" />
         <activity android:name=".Detalle.DetallesLibroClienteActivity" />

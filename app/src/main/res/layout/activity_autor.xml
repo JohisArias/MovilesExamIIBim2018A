@@ -27,7 +27,7 @@
         android:id="@+id/btnGuardarAutor"
         android:layout_width="129dp"
         android:layout_height="52dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="72dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/guardar"
         android:textColor="@android:color/background_light"
@@ -44,83 +44,85 @@
         android:id="@+id/txtNombreAutor"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/textViewAutor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="52dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtApellido"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="Apellido"
         android:inputType="textPersonName"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/txtNombreAutor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreAutor"
-        tools:layout_editor_absoluteY="109dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAutor" />
 
     <EditText
         android:id="@+id/txtFechaNacimiento"
         android:layout_width="287dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="Fecha de Nacimiento"
         android:inputType="date"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintHorizontal_bias="0.505"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/txtApellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
 
     <EditText
         android:id="@+id/txtNumeroLibros"
         android:layout_width="287dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="Número de libros"
         android:inputType="number"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
+        app2:layout_constraintHorizontal_bias="0.505"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/txtFechaNacimiento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimiento"
-        tools:layout_editor_absoluteY="222dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimiento" />
 
     <Switch
         android:id="@+id/switchEcuatoriano"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Es ecuatoriano?"
         android:textColorLink="?attr/colorPrimaryDark"
         android:textSize="18sp"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.5"
         app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/txtNumeroLibros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibros"
-        tools:layout_editor_absoluteY="290dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibros" />
 
 </android.support.constraint.ConstraintLayout>
